@@ -88,11 +88,11 @@ public class Ex4b_3DProject {
 
 		// get cells as IJ2 Dataset
 		Dataset bars = (Dataset) ij.io().open(
-			"../images/Bars-G10-P15-stack-cropped.tif");
+			"../../images/Bars-G10-P15-stack-cropped.tif");
 		Dataset psf = (Dataset) ij.io().open(
-			"../images/PSF-Bars-stack-cropped.tif");
+			"../../images/PSF-Bars-stack-cropped.tif");
 		Dataset deconvolved = (Dataset) ij.io().open(
-			"../images/deconvolvedbars.tif");
+			"../../images/deconvolvedbars.tif");
 
 		IJ2CourseImageUtility.displayAxisInfo(bars, ij.log());
 		IJ2CourseImageUtility.displayAxisInfo(psf, ij.log());

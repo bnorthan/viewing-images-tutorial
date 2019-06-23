@@ -21,12 +21,12 @@ public class Ex1a_OpenAndDisplayImages {
 		// launch it
 		ij.launch(args);
 
-		ImagePlus impBridge = IJ.openImage("../images/bridge.tif");
+		ImagePlus impBridge = IJ.openImage("../../images/bridge.tif");
 		impBridge.show();
 
 		// get bridge as IJ2 Dataset
 		// Dataset
-		Dataset datasetBridge = (Dataset) ij.io().open("../images/bridge.tif");
+		Dataset datasetBridge = (Dataset) ij.io().open("../../images/bridge.tif");
 		// show the IJ1 ImagePlus
 		impBridge.show();
 		impBridge.setTitle("ImageJ1 ImagePlus");

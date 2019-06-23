@@ -52,8 +52,8 @@ public class Ex1b_CommandDisplayImages<T extends RealType<T> & NativeType<T>>
 
 		// get bridge as IJ2 Dataset
 		// Dataset
-		// dataBridge=(Dataset)ij.io().open("http://imagej.net/images/bridge.gif");
-		Dataset datasetBridge = (Dataset) ij.io().open("../images/bridge.tif");
+		// dataBridge=(Dataset)ij.io().open("http://imagej.n../../images/bridge.gif");
+		Dataset datasetBridge = (Dataset) ij.io().open("../../images/bridge.tif");
 
 		ij.ui().show(datasetBridge);
 	}

@@ -35,7 +35,7 @@ public class Ex3c_CropHyperslice {
 		// launch it
 		ij.launch(args);
 
-		final Dataset image = (Dataset) ij.io().open("../images/mitosis.tif"); // convenient
+		final Dataset image = (Dataset) ij.io().open("../../images/mitosis.tif"); // convenient
 																				// example
 																				// stack
 

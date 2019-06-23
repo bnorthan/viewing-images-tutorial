@@ -31,7 +31,7 @@ public class Ex3a_CropAndDisplay3D {
 		ij.launch(args);
 
 		Dataset image = (Dataset) ij.io().open(
-			"../images/Fibronectin.tif");
+			"../../images/Fibronectin.tif");
 
 		ij.ui().show(image);
 

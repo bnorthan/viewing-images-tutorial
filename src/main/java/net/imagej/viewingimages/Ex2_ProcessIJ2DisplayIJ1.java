@@ -29,7 +29,7 @@ public class Ex2_ProcessIJ2DisplayIJ1 {
 		ij.launch(args);
 
 		// get bridge as IJ2 Dataset
-		Dataset dataBridge = (Dataset) ij.io().open("../images/bridge.tif");
+		Dataset dataBridge = (Dataset) ij.io().open("../../images/bridge.tif");
 
 		// blur the bridge
 		RandomAccessibleInterval<T> blurred = ij.op().filter().gauss(

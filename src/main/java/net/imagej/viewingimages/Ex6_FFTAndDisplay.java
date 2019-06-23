@@ -36,7 +36,7 @@ public class Ex6_FFTAndDisplay {
 		ij.launch(args);
 		
 		Dataset dataBridge = (Dataset)ij.io().open(
-				"../images/bridge.tif");
+				"../../images/bridge.tif");
 		
 		ImgPlus<T> impBridge=(ImgPlus<T>)dataBridge.getImgPlus();
 

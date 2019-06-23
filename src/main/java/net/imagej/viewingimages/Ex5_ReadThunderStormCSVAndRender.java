@@ -44,8 +44,8 @@ public class Ex5_ReadThunderStormCSVAndRender {
 			new double[] { 1.0, 1.0 }, new FloatType());
 
 		// read the CSV file
-		loadPoints3dCsv("../images/Ellipsoid_body_synaptic_clefts.csv", false);
-		// loadPoints3dCsv("../images/thunderstorm.csv", true);
+		loadPoints3dCsv("../../images/Ellipsoid_body_synaptic_clefts.csv", false);
+		// loadPoints3dCsv("../../images/thunderstorm.csv", true);
 
 		// get min and max X,Y in real space
 		float minX = Collections.min(x);

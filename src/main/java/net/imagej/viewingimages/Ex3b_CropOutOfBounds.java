@@ -31,7 +31,7 @@ public class Ex3b_CropOutOfBounds {
 		ij.launch(args);
 
 		RandomAccessibleInterval<T> image = (RandomAccessibleInterval<T>) ij.io().open(
-			"../images/boats.tif");
+			"../../images/boats.tif");
 		
 		ij.ui().show(image);
 

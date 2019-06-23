@@ -27,7 +27,7 @@ public class Ex4a_3DPermute {
 		ij.launch(args);
 
 		// open data
-		Dataset data = (Dataset) ij.io().open("../images/CHUM_CR_R12802_SDTIRF_coreg_2018_05_04_mai_40X_fovA.czi");
+		Dataset data = (Dataset) ij.io().open("../../images/CHUM_CR_R12802_SDTIRF_coreg_2018_05_04_mai_40X_fovA.czi");
 
 		IJ2CourseImageUtility.displayAxisInfo(data, ij.log());
 		ij.ui().show("Data ", data);
