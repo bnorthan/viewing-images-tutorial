@@ -539,11 +539,14 @@ for (int d = 0; d < imgPlus.numDimensions(); d++) {
 	}
 }
 
-Img<T> projection = ops.create().img(new FinalDimensions(projectedDimensions), imgPlus.firstElement());
+Img<T> projection = ops.create().img(new FinalDimensions(
+	projectedDimensions), imgPlus.firstElement());
 
-UnaryComputerOp projector = Computers.unary(ops, Ops.Max.Sum.class, projection.firstElement(), imgPlus);
+UnaryComputerOp<ImgPlus<T>, T> projector = Computers.unary(ops, projectType,
+	projection.firstElement(), imgPlus);
 
-return ops.transform().project(projection, imgPlus, projector, projectedDimensionIndex);
+return ops.transform().project(projection, imgPlus,
+	(UnaryComputerOp) projector, projectedDimensionIndex);
 
 						</code></pre>
 					</section>
