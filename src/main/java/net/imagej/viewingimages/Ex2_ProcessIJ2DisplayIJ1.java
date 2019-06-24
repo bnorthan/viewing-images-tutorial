@@ -33,11 +33,11 @@ public class Ex2_ProcessIJ2DisplayIJ1 {
 
 		// blur the bridge
 		RandomAccessibleInterval<T> blurred = ij.op().filter().gauss(
-			(RandomAccessibleInterval<T>) dataBridge, 3.0);
+			(RandomAccessibleInterval<T>) dataBridge.getImgPlus(), 3.0);
 
 		// convert bridge to IJ1
 		ImagePlus impBridge = ImageJFunctions.wrap(
-			(RandomAccessibleInterval<T>) dataBridge, "bridge");
+			(RandomAccessibleInterval<T>) dataBridge.getImgPlus(), "bridge");
 		// convert blurred to IJ1
 		ImagePlus impBlurred = ImageJFunctions.wrap(blurred, "blurred");
 
