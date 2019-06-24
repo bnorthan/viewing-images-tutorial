@@ -30,37 +30,37 @@ public class Ex3a_CropAndDisplay3D {
 		// launch it
 		ij.launch(args);
 
-		Dataset image = (Dataset) ij.io().open(
+		Dataset data = (Dataset) ij.io().open(
 			"../../images/Fibronectin.tif");
 
-		ij.ui().show(image);
+		ij.ui().show(data);
 
 		Interval interval = Intervals.createMinMax(400, 400, 8, 700, 700, 16);
 
 		// crop interval
 		RandomAccessibleInterval<T> rai = (RandomAccessibleInterval<T>) ij.op()
-			.transform().crop(image, interval);
+			.transform().crop(data.getImgPlus(), interval);
 
 		// alternatively you can use Views directly
 		RandomAccessibleInterval<T> rai2 = (RandomAccessibleInterval<T>) Views
-			.interval(image, interval);
+			.interval(data.getImgPlus(), interval);
 
-		// display the image
+		// display the data
 		ij.ui().show("RAI volume", rai);
 		
 		IJ.run("Tile", "");
 		
-		extra(ij, image, interval);
+		extra(ij, data, interval);
 	
 	}
 	
-	public static <T extends RealType<T> & NativeType<T>>void extra(ImageJ ij, Dataset image, Interval interval) {
+	public static <T extends RealType<T> & NativeType<T>>void extra(ImageJ ij, Dataset data, Interval interval) {
 		// is there a cost to using ops
 		long start = System.nanoTime();
 
 		// crop interval
 		RandomAccessibleInterval<T> rai = (RandomAccessibleInterval<T>) ij.op()
-			.transform().crop(image, interval);
+			.transform().crop(data.getImgPlus(), interval);
 
 		long end = System.nanoTime();
 		
@@ -70,7 +70,7 @@ public class Ex3a_CropAndDisplay3D {
 
 		// alternatively you can use Views directly
 		RandomAccessibleInterval<T> rai2 = (RandomAccessibleInterval<T>) Views
-			.interval(image, interval);
+			.interval(data.getImgPlus(), interval);
 
 		end = System.nanoTime();
 		
